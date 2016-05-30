@@ -123,23 +123,27 @@ J. Delete Database
    ```
 
 ### Misc
+
 *  Import
-    ```
-    $ mongoimport --db database --collection collection < path/filename.json
-    ```
+
+   ```
+   $ mongoimport --db database --collection collection < path/filename.json
+   ```
 *  Export
+
    ```
    service mongod stop (To Stop before backup)
    $ mongoexport --db database --collection collection --out path/ filename.json
    $ mongodump --dbpath /data/db --out path
    ```
-* Monitoring
-  ```
-  $ mongostat  // captures database operations by type
-  $ mongotop   // tracks read/write activity
-  $ mongoperf // performance testing tool
-  MMS ( MongoDB Monitoring Service)
-  ```
+*  Monitoring
+
+   ```
+   $ mongostat  // captures database operations by type
+   $ mongotop   // tracks read/write activity
+   $ mongoperf // performance testing tool
+   MMS ( MongoDB Monitoring Service)
+   ```
 * [Replica](https://blog.ajduke.in/2013/05/31/setup-mongodb-replica-set-in-4-steps/)
 * [Sharding](https://www.javacodegeeks.com/2015/02/setting-up-sharded-mongodb-cluster-in-localhost.html)
 * [MapReduce](https://docs.mongodb.com/manual/core/map-reduce-concurrency/)
