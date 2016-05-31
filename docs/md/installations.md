@@ -1,6 +1,7 @@
 # Ubuntu Software Setup Instructions
 ### Common Guide Lines
 1. Install any softwares
+
    ```
    sudo apt-get install <pacakge_name>
             (or)
@@ -9,6 +10,7 @@
    Using dpkg / Ubuntu Software Center / Synaptic Tool
    ```
 2. Uninstall any softwares
+
    ```
    sudo apt-get autoremove
    sudo apt-get remove <pacakge_name> (will remove the binaries)
@@ -16,6 +18,7 @@
    sudo apt-get purge <pacakge_name>  (will remove everything)
    ```
 3. List All existing installed Packages
+
    ```
    dpkg-query -l
    ```
@@ -23,17 +26,20 @@
 ### Setup Useful Packages
 
 * [Ubuntu Build Essentials](http://packages.ubuntu.com/precise/build-essential)
+
   ```
   sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe
   sudo apt-get update
   sudo apt-get install build-essential
   ```
 * [SSH](https://www.maketecheasier.com/secure-ssh-server-ubuntu/)
+
   ```
   $ sudo apt-get update
   $ sudo apt-get install openssh
   ```
 * Telnet/FTP
+
   ```
   $ sudo apt-get install xinetd telnetd
   $ sudo /etc/init.d/xinetd restart
@@ -43,6 +49,7 @@
   $ sudo service vsftpd restart
   ```
 * LAMP
+
   ```
   $ sudo apt-get install apache2
   $ sudo apt-get install mysql-server
@@ -64,7 +71,7 @@
   $ sudo apt-get -y install phpmyadmin
   ```
   # Ref: 
-  - [Apache](http://httpd.apache.org/){:target="_blank"}
+  - [Apache](http://httpd.apache.org/)
   - [PHP](http://www.php.net/)
   - [MySQL](http://www.mysql.com/)
   - [MariaDB](https://mariadb.com/)
@@ -73,6 +80,7 @@
 
 
 * [Browsers:Firefox/Chrome](https://www.mozilla.org/en-US/firefox/new/)
+
   ```
   **Firefox**
   $ cd /usr/local
@@ -87,6 +95,7 @@
   $ sudo apt-get install google-chrome
   ```
 * [TeamViewer](https://www.teamviewer.com/hi/download/windows/)
+  
   ```
   $ wget http://download.teamviewer.com/download/teamviewer_linux.deb
   $ sudo dpkg --add-architecture i686
@@ -102,10 +111,20 @@
   $ sudo apt-get install skype
   ```
 * [Sublime](https://www.sublimetext.com/2)
+  
   ```
   $ sudo add-apt-repository -y ppa:webupd8team/sublime-text-2
   $ sudo apt-get update
   $ sudo apt-get install sublime-text
+  ```
+* [Nginx](http://nginx.com)
+  
+  ```
+  $ sudo apt-get install nginx
+  $ sudo /etc/init.d/nginx start
+  $ htop (checking)
+  $ sudo vi /etc/nginx/nginx.conf (configuration file)
+  $ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000 (redirection)
   ```
 ### Common Errors && Solutions
 I. 
