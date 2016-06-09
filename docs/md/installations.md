@@ -79,6 +79,8 @@
   - [phpMyAdmin](http://www.phpmyadmin.net/)
 
 
+* [python](http://chrisstrelioff.ws/sandbox/2014/06/04/install_and_setup_python_and_packages_on_ubuntu_14_04.html)
+
 * [Browsers:Firefox/Chrome](https://www.mozilla.org/en-US/firefox/new/)
 
   ```
@@ -118,6 +120,29 @@
   $ sudo apt-get update
   $ sudo apt-get install sublime-text
   ```
+
+* [Git](https://git-scm.com/)
+
+  ```
+  $ sudo apt-get update
+  $ sudo apt-get install git-core
+  $ git --version
+  $ git config --global user.name "username"
+  $ git config --global user.email "user@email.com"
+  $ git config --list
+  ```
+
+* [Atom](http://atom.io/)
+
+  ```
+  $ sudo add-apt-repository ppa:webupd8team/atom
+  $ sudo apt-get update
+  $ sudo apt-get install atom
+  $ atom -version (version checking)
+
+  Note: CTRL+, -> Settings
+  ```
+
 * [Nginx](http://nginx.com)
   
   ```
@@ -141,8 +166,61 @@
     export JAVA_HOME=`pwd`
     export PATH=$JAVA_HOME/bin:$PATH
   ```
+
+* [Node.js](https://nodejs.org/en/download/)
+
+  ```
+  $ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+  $ sudo apt-get install -y nodejs
+  $ node --version
+  ---------------------------------------------------------------
+  [nvm](http://www.liquidweb.com/kb/how-to-install-nvm-node-version-manager-for-node-js-on-ubuntu-14-04-lts/)
+  [npm](https://docs.npmjs.com/getting-started/installing-node)
+  [grunt](http://gruntjs.com/installing-grunt)
+  [gulp](https://github.com/gulpjs/gulp/tree/master/docs)
+  ```
+
+* [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+
+  ```
+  $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+  $ echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list 
+  $ sudo apt-get update
+  $ sudo apt-get install -y mongodb-org
+  $ sudo service mongod status/start/stop (check status)
+  $ mongostat ( summary stats)
+  $ mongo (shell)
+  ```
+
+* [DropBox](https://www.dropbox.com/business)
+
+  ```
+  $ sudo apt-get install nautilus-dropbox
+  $ dropbox
+  ```
 ### Common Errors && Solutions
-I. 
+
+-  Disable IPv6
+
+   ```
+   $ echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
+   ```
+
+-  Disable Firewall
+
+   ```
+   $ sudo ufw disable
+   ```
+
+-  To enable ssh root access
+
+   ```
+   $ sudo vi /etc/ssh/sshd_config
+   @ PermitRootLogin without-password to @PermitRootLogin yes
+   $ sudo service ssh restart
+   ```
+
+-  [Enable root user](http://www.bictor.com/2015/10/07/enabling-root-user-in-ubuntu-14-04-3/)
 
 
 ### Some useful References
