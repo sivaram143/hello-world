@@ -105,6 +105,7 @@
   $ sudo dpkg -i teamviewer_linux.deb
   ```
 * [Skype](https://www.skype.com/en/download-skype/skype-for-computer/)
+
   ```
   $ sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
   $ sudo apt-get update
@@ -126,8 +127,23 @@
   $ sudo vi /etc/nginx/nginx.conf (configuration file)
   $ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000 (redirection)
   ```
+* [Java](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html)
+
+  ```
+  $ sudo apt-add-repository ppa:webupd8team/java
+  $ sudo apt-get update
+  $ sudo apt-get install oracle-java8-installer
+  $ java -version (Versification)
+
+  Setting Path:
+  -----------
+   ~/.bashrc :
+    export JAVA_HOME=`pwd`
+    export PATH=$JAVA_HOME/bin:$PATH
+  ```
 ### Common Errors && Solutions
 I. 
 
 
-
+### Some useful References
+- [Adding Users in linux](http://www.tecmint.com/add-users-in-linux/)
