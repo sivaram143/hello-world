@@ -23,10 +23,7 @@ module.exports = function (grunt) {
 
     'use strict';
     grunt.initConfig({
-        // pkg: grunt.file.readJSON('package.json')
-        /* pdf file Generating but still has some error
-            Todo: fix the issue
-        */
+        pkg: grunt.file.readJSON('package.json'),
         /* markdown to pdf */
         markdownpdf: {
             files: {
@@ -41,7 +38,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         src: ['md/*.md'],
-                        dest: 'dest',
+                        dest: 'html',
                         ext: '.html',
                         flatten: true
                     }
