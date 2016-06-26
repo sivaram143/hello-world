@@ -1,0 +1,761 @@
+<!-- <!DOCTYPE html>
+<html>
+<title>My Repository</title>
+
+<xmp theme="cerulean" style="display:none;">
+<h2 id="linux-shell-scripting">Linux &amp;&amp; Shell Scripting</h2>
+<h3 id="terminology">Terminology</h3>
+<ul>
+<li>Shell: It is a program that takes your commands from the keyboard and gives them to the operating system to perform.<pre><code> Some types of Shells: bash, ksh, csh ...
+</code></pre></li>
+<li>Terminal: This is a program that opens a window and lets you interact with the shell.<pre><code> gnome-terminal, nxterm ...
+CTRL+ALT+T :shortcut
+</code></pre></li>
+<li>Editor: Creting script files<pre><code>gedit, vi/vim, emacs, atom, nano ...
+</code></pre></li>
+</ul>
+<h3 id="some-useful-linux-commands">Some Useful Linux Commands</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pwd</td>
+<td>prints Working directory</td>
+<td>....</td>
+</tr>
+<tr>
+<td>bc</td>
+<td>basic calculator</td>
+<td>....</td>
+</tr>
+<tr>
+<td>date</td>
+<td>displays date</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ls</strong></td>
+<td>list of files and directories</td>
+<td></td>
+</tr>
+<tr>
+<td>who</td>
+<td>displays who is logged on to the system.</td>
+<td></td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>show or set the system&#39;s host name</td>
+<td></td>
+</tr>
+<tr>
+<td>uptime</td>
+<td>how long your system is running</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>uname -a</strong></td>
+<td>displays system information</td>
+<td></td>
+</tr>
+<tr>
+<td>lsb_release -a</td>
+<td>displays ubuntu version</td>
+<td></td>
+</tr>
+<tr>
+<td>cd</td>
+<td>change directory</td>
+<td></td>
+</tr>
+<tr>
+<td>mkdir <name></td>
+<td>create a directory</td>
+<td></td>
+</tr>
+<tr>
+<td>touch <filename></td>
+<td>create a file</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>cat <filename></strong></td>
+<td>display the file content</td>
+<td></td>
+</tr>
+<tr>
+<td>file <filename></td>
+<td>determines the file type</td>
+<td></td>
+</tr>
+<tr>
+<td>more</td>
+<td>displays text, one screen at a time.</td>
+<td></td>
+</tr>
+<tr>
+<td>less</td>
+<td>similar to more &amp;&amp; it has fw/bw facility</td>
+<td></td>
+</tr>
+<tr>
+<td>head</td>
+<td>reads the first few lines</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>tail -f</strong></td>
+<td>reads the last few lines</td>
+<td></td>
+</tr>
+<tr>
+<td>cp</td>
+<td>copy files and directories</td>
+<td></td>
+</tr>
+<tr>
+<td>mv</td>
+<td>move or rename files and directives</td>
+<td></td>
+</tr>
+<tr>
+<td>rm</td>
+<td>remove files and directories</td>
+<td></td>
+</tr>
+<tr>
+<td>sort</td>
+<td>sorts the file contents</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>wc</td>
+<td>word count</td>
+<td></td>
+</tr>
+<tr>
+<td>which <cmd></td>
+<td>shows the localtion</td>
+<td></td>
+</tr>
+<tr>
+<td>chmod</td>
+<td>Permissions</td>
+<td>rwx/ugo/421</td>
+</tr>
+<tr>
+<td><strong>sudo -i</strong></td>
+<td>become root user</td>
+<td></td>
+</tr>
+<tr>
+<td>help / info</td>
+<td>getting help / info</td>
+<td></td>
+</tr>
+<tr>
+<td>man</td>
+<td>manual documenation</td>
+<td></td>
+</tr>
+<tr>
+<td>tee</td>
+<td>store and view (both at the same time)</td>
+<td></td>
+</tr>
+<tr>
+<td>find . name</td>
+<td>search and locate list of files and directories</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>grep</strong></td>
+<td>search text or searches the given file for lines containing a match to the given strings or words</td>
+<td></td>
+</tr>
+<tr>
+<td>locate</td>
+<td>simplest and quickest way to find the locations of files and directories</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>unzip</strong></td>
+<td>extract the zip file</td>
+<td></td>
+</tr>
+<tr>
+<td>tar(-cvf/-xvf)</td>
+<td>used to compress files and folders</td>
+<td></td>
+</tr>
+<tr>
+<td>wget</td>
+<td>(web get) download the software</td>
+<td></td>
+</tr>
+<tr>
+<td>sed</td>
+<td>stream Editor used for modifying the files in unix (or linux)</td>
+<td><a href="http://www.folkstalk.com/2012/01/sed-command-in-unix-examples.html">http://www.folkstalk.com/2012/01/sed-command-in-unix-examples.html</a></td>
+</tr>
+<tr>
+<td><strong>ps</strong></td>
+<td>report a snapshot of the current processes.</td>
+<td></td>
+</tr>
+<tr>
+<td>top</td>
+<td>display top CPU processes</td>
+<td></td>
+</tr>
+<tr>
+<td>netstat</td>
+<td>tool for checking your network configuration and activity</td>
+<td></td>
+</tr>
+<tr>
+<td>du</td>
+<td>disk usage</td>
+<td></td>
+</tr>
+<tr>
+<td>df -h</td>
+<td>disk filesystem</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>free -m</strong></td>
+<td>display RAM details in Linux machine</td>
+<td></td>
+</tr>
+<tr>
+<td>ln</td>
+<td>creates links between files.</td>
+<td></td>
+</tr>
+<tr>
+<td>ssh user@host</td>
+<td>login into remote host</td>
+<td></td>
+</tr>
+<tr>
+<td>scp <src> <dest></td>
+<td>transfer local to remote</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ifconfig</strong></td>
+<td>view the configuration of, a network interface.</td>
+<td></td>
+</tr>
+<tr>
+<td>route</td>
+<td>view or manipulate the system’s routing table.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ping</strong></td>
+<td>used to find out whether the peer host/gateway is reachable.</td>
+<td></td>
+</tr>
+<tr>
+<td>tree</td>
+<td>lists the contents of directories in a tree-like format.</td>
+<td></td>
+</tr>
+<tr>
+<td>service</td>
+<td>call script located at /etc/init.d/ directory and execute the script</td>
+<td>service <name> start/stop/restart</td>
+</tr>
+<tr>
+<td>kill</td>
+<td>terminate the process</td>
+<td></td>
+</tr>
+<tr>
+<td>curl</td>
+<td>easy to use command line tool to send and receive files</td>
+<td><a href="http://www.slashroot.in/curl-command-tutorial-linux-example-usage">http://www.slashroot.in/curl-command-tutorial-linux-example-usage</a></td>
+</tr>
+<tr>
+<td><strong>reboot</strong></td>
+<td>reboot the system</td>
+<td></td>
+</tr>
+<tr>
+<td>init 0</td>
+<td>shuts down the os</td>
+<td></td>
+</tr>
+<tr>
+<td>init 6</td>
+<td>restart the os</td>
+<td></td>
+</tr>
+<tr>
+<td>script</td>
+<td>record the log</td>
+<td></td>
+</tr>
+<tr>
+<td>env</td>
+<td>displays environment variables</td>
+<td></td>
+</tr>
+<tr>
+<td>echo</td>
+<td>echo displays a line of text.</td>
+<td></td>
+</tr>
+<tr>
+<td>cat /proc/cpuinfo</td>
+<td>cpu inforamtion</td>
+<td></td>
+</tr>
+<tr>
+<td>cat /proc/meminfo</td>
+<td>memory information</td>
+<td></td>
+</tr>
+<tr>
+<td>ls /var/log</td>
+<td>view log files</td>
+<td></td>
+</tr>
+<tr>
+<td>dmesg</td>
+<td>display kernal logs</td>
+<td></td>
+</tr>
+<tr>
+<td>cat /etc/hosts</td>
+<td>displays hostnames</td>
+<td></td>
+</tr>
+<tr>
+<td>cat /etc/passwd</td>
+<td>displays login information</td>
+<td></td>
+</tr>
+<tr>
+<td>~/.bashrc</td>
+<td>user&#39;s personal startup file</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="shell-scripting">Shell Scripting</h3>
+<ul>
+<li><p>Steps to create a script </p>
+<ul>
+<li>Write a script using editor and save as <code>.sh</code></li>
+<li>Give the permissions and excute it. <code>chmod 755</code></li>
+</ul>
+<pre><code>eg#1: https://gist.github.com/sivaram143/7761ea39adc62b58e91f06adcbacca16
+# Usage : ./welcome.sh
+
+# the below line is called shebang
+#!/bin/bash 
+
+# prints the string to stdout
+echo &quot;Welcome !&quot;
+</code></pre></li>
+</ul>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="https://linuxconfig.org">Linux</a></li>
+</ul>
+
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<title>My Documents Repository</title>
+
+<xmp theme="cerulean" style="display:none;" toc>
+<h2 id="linux-shell-scripting">Linux &amp;&amp; Shell Scripting</h2>
+<h3 id="terminology">Terminology</h3>
+<ul>
+<li>Shell: It is a program that takes your commands from the keyboard and gives them to the operating system to perform.<pre><code> Some types of Shells: bash, ksh, csh ...
+</code></pre></li>
+<li>Terminal: This is a program that opens a window and lets you interact with the shell.<pre><code> gnome-terminal, nxterm ...
+CTRL+ALT+T :shortcut
+</code></pre></li>
+<li>Editor: Creting script files<pre><code>gedit, vi/vim, emacs, atom, nano ...
+</code></pre></li>
+</ul>
+<h3 id="some-useful-linux-commands">Some Useful Linux Commands</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pwd</td>
+<td>prints Working directory</td>
+<td>....</td>
+</tr>
+<tr>
+<td>bc</td>
+<td>basic calculator</td>
+<td>....</td>
+</tr>
+<tr>
+<td>date</td>
+<td>displays date</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ls</strong></td>
+<td>list of files and directories</td>
+<td></td>
+</tr>
+<tr>
+<td>who</td>
+<td>displays who is logged on to the system.</td>
+<td></td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>show or set the system&#39;s host name</td>
+<td></td>
+</tr>
+<tr>
+<td>uptime</td>
+<td>how long your system is running</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>uname -a</strong></td>
+<td>displays system information</td>
+<td></td>
+</tr>
+<tr>
+<td>lsb_release -a</td>
+<td>displays ubuntu version</td>
+<td></td>
+</tr>
+<tr>
+<td>cd</td>
+<td>change directory</td>
+<td></td>
+</tr>
+<tr>
+<td>mkdir <name></td>
+<td>create a directory</td>
+<td></td>
+</tr>
+<tr>
+<td>touch <filename></td>
+<td>create a file</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>cat <filename></strong></td>
+<td>display the file content</td>
+<td></td>
+</tr>
+<tr>
+<td>file <filename></td>
+<td>determines the file type</td>
+<td></td>
+</tr>
+<tr>
+<td>more</td>
+<td>displays text, one screen at a time.</td>
+<td></td>
+</tr>
+<tr>
+<td>less</td>
+<td>similar to more &amp;&amp; it has fw/bw facility</td>
+<td></td>
+</tr>
+<tr>
+<td>head</td>
+<td>reads the first few lines</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>tail -f</strong></td>
+<td>reads the last few lines</td>
+<td></td>
+</tr>
+<tr>
+<td>cp</td>
+<td>copy files and directories</td>
+<td></td>
+</tr>
+<tr>
+<td>mv</td>
+<td>move or rename files and directives</td>
+<td></td>
+</tr>
+<tr>
+<td>rm</td>
+<td>remove files and directories</td>
+<td></td>
+</tr>
+<tr>
+<td>sort</td>
+<td>sorts the file contents</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>wc</td>
+<td>word count</td>
+<td></td>
+</tr>
+<tr>
+<td>which <cmd></td>
+<td>shows the localtion</td>
+<td></td>
+</tr>
+<tr>
+<td>chmod</td>
+<td>Permissions</td>
+<td>rwx/ugo/421</td>
+</tr>
+<tr>
+<td><strong>sudo -i</strong></td>
+<td>become root user</td>
+<td></td>
+</tr>
+<tr>
+<td>help / info</td>
+<td>getting help / info</td>
+<td></td>
+</tr>
+<tr>
+<td>man</td>
+<td>manual documenation</td>
+<td></td>
+</tr>
+<tr>
+<td>tee</td>
+<td>store and view (both at the same time)</td>
+<td></td>
+</tr>
+<tr>
+<td>find . name</td>
+<td>search and locate list of files and directories</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>grep</strong></td>
+<td>search text or searches the given file for lines containing a match to the given strings or words</td>
+<td></td>
+</tr>
+<tr>
+<td>locate</td>
+<td>simplest and quickest way to find the locations of files and directories</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>unzip</strong></td>
+<td>extract the zip file</td>
+<td></td>
+</tr>
+<tr>
+<td>tar(-cvf/-xvf)</td>
+<td>used to compress files and folders</td>
+<td></td>
+</tr>
+<tr>
+<td>wget</td>
+<td>(web get) download the software</td>
+<td></td>
+</tr>
+<tr>
+<td>sed</td>
+<td>stream Editor used for modifying the files in unix (or linux)</td>
+<td><a href="http://www.folkstalk.com/2012/01/sed-command-in-unix-examples.html">http://www.folkstalk.com/2012/01/sed-command-in-unix-examples.html</a></td>
+</tr>
+<tr>
+<td><strong>ps</strong></td>
+<td>report a snapshot of the current processes.</td>
+<td></td>
+</tr>
+<tr>
+<td>top</td>
+<td>display top CPU processes</td>
+<td></td>
+</tr>
+<tr>
+<td>netstat</td>
+<td>tool for checking your network configuration and activity</td>
+<td></td>
+</tr>
+<tr>
+<td>du</td>
+<td>disk usage</td>
+<td></td>
+</tr>
+<tr>
+<td>df -h</td>
+<td>disk filesystem</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>free -m</strong></td>
+<td>display RAM details in Linux machine</td>
+<td></td>
+</tr>
+<tr>
+<td>ln</td>
+<td>creates links between files.</td>
+<td></td>
+</tr>
+<tr>
+<td>ssh user@host</td>
+<td>login into remote host</td>
+<td></td>
+</tr>
+<tr>
+<td>scp <src> <dest></td>
+<td>transfer local to remote</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ifconfig</strong></td>
+<td>view the configuration of, a network interface.</td>
+<td></td>
+</tr>
+<tr>
+<td>route</td>
+<td>view or manipulate the system’s routing table.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ping</strong></td>
+<td>used to find out whether the peer host/gateway is reachable.</td>
+<td></td>
+</tr>
+<tr>
+<td>tree</td>
+<td>lists the contents of directories in a tree-like format.</td>
+<td></td>
+</tr>
+<tr>
+<td>service</td>
+<td>call script located at /etc/init.d/ directory and execute the script</td>
+<td>service <name> start/stop/restart</td>
+</tr>
+<tr>
+<td>kill</td>
+<td>terminate the process</td>
+<td></td>
+</tr>
+<tr>
+<td>curl</td>
+<td>easy to use command line tool to send and receive files</td>
+<td><a href="http://www.slashroot.in/curl-command-tutorial-linux-example-usage">http://www.slashroot.in/curl-command-tutorial-linux-example-usage</a></td>
+</tr>
+<tr>
+<td><strong>reboot</strong></td>
+<td>reboot the system</td>
+<td></td>
+</tr>
+<tr>
+<td>init 0</td>
+<td>shuts down the os</td>
+<td></td>
+</tr>
+<tr>
+<td>init 6</td>
+<td>restart the os</td>
+<td></td>
+</tr>
+<tr>
+<td>script</td>
+<td>record the log</td>
+<td></td>
+</tr>
+<tr>
+<td>env</td>
+<td>displays environment variables</td>
+<td></td>
+</tr>
+<tr>
+<td>echo</td>
+<td>echo displays a line of text.</td>
+<td></td>
+</tr>
+<tr>
+<td>cat /proc/cpuinfo</td>
+<td>cpu inforamtion</td>
+<td></td>
+</tr>
+<tr>
+<td>cat /proc/meminfo</td>
+<td>memory information</td>
+<td></td>
+</tr>
+<tr>
+<td>ls /var/log</td>
+<td>view log files</td>
+<td></td>
+</tr>
+<tr>
+<td>dmesg</td>
+<td>display kernal logs</td>
+<td></td>
+</tr>
+<tr>
+<td>cat /etc/hosts</td>
+<td>displays hostnames</td>
+<td></td>
+</tr>
+<tr>
+<td>cat /etc/passwd</td>
+<td>displays login information</td>
+<td></td>
+</tr>
+<tr>
+<td>~/.bashrc</td>
+<td>user&#39;s personal startup file</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="shell-scripting">Shell Scripting</h3>
+<ul>
+<li><p>Steps to create a script </p>
+<ul>
+<li>Write a script using editor and save as <code>.sh</code></li>
+<li>Give the permissions and excute it. <code>chmod 755</code></li>
+</ul>
+<pre><code>eg#1: https://gist.github.com/sivaram143/7761ea39adc62b58e91f06adcbacca16
+# Usage : ./welcome.sh
+
+# the below line is called shebang
+#!/bin/bash 
+
+# prints the string to stdout
+echo &quot;Welcome !&quot;
+</code></pre></li>
+</ul>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="https://linuxconfig.org">Linux</a></li>
+</ul>
+
+</xmp>
+
+<script src="http://ndossougbe.github.io/strapdown/dist/strapdown.js"></script>
+</html>
