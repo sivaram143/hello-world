@@ -74,6 +74,7 @@
 | **reboot** | reboot the system | |
 | init 0 | shuts down the os ||
 | init 6 | restart the os ||
+| script | record the log ||
 | env | displays environment variables | |
 | echo | echo displays a line of text. ||
 | cat /proc/cpuinfo | cpu inforamtion ||
@@ -99,6 +100,8 @@
 
   # prints the string to stdout
   echo "Welcome !"
-
   ```
 
+### References
+
+- [Linux](https://linuxconfig.org)
