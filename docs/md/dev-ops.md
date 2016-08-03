@@ -64,6 +64,7 @@
 - https://www.reddit.com/r/devops/
 - http://it-ebooks.info/search/?q=devops
 - http://docker-books.com/
+- [dev-ops-bookmarks](http://www.devopsbookmarks.com/)
 - [dev-ops-img](https://www.google.co.in/search?biw=1301&bih=605&tbm=isch&sa=1&q=devops+%3D+dev+%2B+ops)
 
 ---
