@@ -47,6 +47,7 @@ V. Start/Stop/Restart MongoDB
 Note: *** Some Configuration Files ***
 - Logs: /var/log/mongodb/mongod.log
 - Configuration : /etc/mongod.conf
+- Startup file: .mongorc.js
 
 ### Connecting to Database
 
@@ -72,6 +73,7 @@ Note: *** Some Configuration Files ***
 | runProgram("ls", "-l")| To Run OS Commands |
 | db.runCommand({cursorInfo:1}) | Cursor Info|
 | db.shutdownServer() | Shutdown the process |
+| hostname() | returns name of this host |
 
 * Running script `mongo <script>.js`
 * Object ID : A 12-byte Hexa decimal BSON type

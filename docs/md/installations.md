@@ -222,6 +222,16 @@
 
 -  [Enable root user](http://www.bictor.com/2015/10/07/enabling-root-user-in-ubuntu-14-04-3/)
 
+-  [Unable to find expected entry 'main/binary-i386/Packages - Chrome](http://askubuntu.com/questions/743814/unable-to-find-expected-entry-main-binary-i386-packages-chrome)
+   ```
+   $ sudo gedit /etc/apt/sources.list.d/google-chrome.list
+   add -- arch=amd64 only at "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+   $ sudo apt-get update
+   $ sudo gedit  /opt/google/chrome/cron/google-chrome
+   -- deb [arch=amd64] http
+   
+   ```
 
 ### Some useful References
 - [Adding Users in linux](http://www.tecmint.com/add-users-in-linux/)
+- [Knowledge Resources](https://linuxconfig.org/)

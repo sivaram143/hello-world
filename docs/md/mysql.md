@@ -57,6 +57,14 @@ Note: **Some Configuration Files**
 | show tables; | Display tables in current database|
 | describe table-name; | Show the description of table|
 | SELECT User,Host FROM mysql.user; | List of Users |
+| SELECT AVG([column]) FROM [table]; | Get average value  |
+| SELECT SUM([column]) FROM [table];| calculate total number of records|
+| SELECT COUNT([column]) FROM [table]; | Counting records|
+| EXPLAIN SELECT * FROM [table];| Explain records |
+| SHOW VARIABLES | List the Variables |
+| CREATE USER 'username'@'localhost' IDENTIFIED BY 'password'; | Creating User |
+| GRANT ALL ON database.* TO 'user'@'localhost';| Grant ALL access to user for * tables|
+| exit | Logout |
 
 ### CRUD Operations
 
@@ -110,6 +118,8 @@ J. Delete Database
    mysql> LOAD DATA LOCAL INFILE 'dump.txt' INTO TABLE tbl;
                       (or)
    $ mysqlimport -u root -p --local database_name dump.txt
+   
+   $ mysql -u [username] -p -h localhost [database] < db_backup.sql
    ```
 *  Export
    ```
@@ -125,6 +135,8 @@ J. Delete Database
 ### References
 
 - [MySQL](http://dev.mysql.com/doc/)
+- http://www.sqlteaching.com/
+- https://www.youtube.com/playlist?list=PLfdtiltiRHWEw4-kRrh1ZZy_3OcQxTn7P
 
 
 

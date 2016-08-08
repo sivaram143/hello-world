@@ -27,8 +27,11 @@ module.exports = function (grunt) {
         /* markdown to pdf */
         markdownpdf: {
             files: {
-                src: "md/*",
-                dest: "pdf/"
+	        expand: true,
+                cwd: 'md',
+                src: ['*.md', '**/*.md'],
+                dest: "pdf/",
+                ext : '.pdf'
             }
         },
         /* markdown to html */
@@ -37,10 +40,11 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        src: ['md/*.md'],
+                        cwd: 'md',
+                        src: ['*.md', '**/*.md'],
                         dest: 'html',
-                        ext: '.html',
-                        flatten: true
+                        ext: '.html'
+                        //flatten: true
                     }
                 ],
                 options: {
