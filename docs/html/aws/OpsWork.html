@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<title>My Documents Repository</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<xmp theme="cerulean" style="display:none;" toc toc-top-link>
+
+**[Back to the main page](index.html)**
+<h1 id="opswork">OpsWork</h1>
+<h3 id="terminology">Terminology</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stack</td>
+<td>A stack is a set of AWS resources that are managed together.Eg: Amazon EC2 instances, Amazon EBS volumes, and ELB&#39;s.</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>represents a stack component</td>
+</tr>
+<tr>
+<td>Instances</td>
+<td>handle tasks such as installing and configuring packages and deploying apps</td>
+</tr>
+<tr>
+<td>Apps</td>
+<td>code that you want to run on an application server.</td>
+</tr>
+<tr>
+<td>Cookbooks and Recipes</td>
+<td>handle tasks such as installing and configuring packages and deploying apps</td>
+</tr>
+<tr>
+<td>Meta Data</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lifecycle Events</strong></p>
+<ul>
+<li>setup<ul>
+<li>Sent when instance boots</li>
+<li>Include deploy event</li>
+<li>Use for initial installation of software &amp; services</li>
+</ul>
+</li>
+<li>configure<ul>
+<li>Sent to all instances When any instance enters or leaves online state</li>
+<li>Use for making sure configuration is up-to-date</li>
+</ul>
+</li>
+<li>deploy<ul>
+<li>Sent when you deploy via UI/API; part of each setup</li>
+<li>Use for custom deployment</li>
+</ul>
+</li>
+<li>undeploy<ul>
+<li>Sent via UI/API when apps are deleted</li>
+<li>Use to remove apps from running instances</li>
+</ul>
+</li>
+<li>shutdown<ul>
+<li>Sent when instance is shut down</li>
+<li>Configurable timeout</li>
+<li>Use for Clean shutdown</li>
+</ul>
+</li>
+</ul>
+<h3 id="chef">Chef</h3>
+<p>  It is an open-source framework that automates software deployment and configuration</p>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="https://github.com/awslabs/opsworks-windows-demo-nodejs">https://github.com/awslabs/opsworks-windows-demo-nodejs</a></li>
+</ul>
+
+</xmp>
+
+<script src="http://ndossougbe.github.io/strapdown/dist/strapdown.js"></script>
+
+</body>
+</html>
