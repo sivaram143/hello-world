@@ -94,6 +94,14 @@ db.customers.getIndexes()
 // droping collection
 db.customers.drop()
 
+//capped collection
+db.createCollection("log", { capped : true, size : 5242880, max : 5000 } )
+// checking capped or not
+db.log.isCapped()
+
+// droping collection
+db.log.drop()
+
 // var sample = [
 //   { "_id" : 1, "domainName" : "test1.com", "hosting" : "hostgator.com" },
 //   { "_id" : 2, "domainName" : "test2.com", "hosting" : "aws.amazon.com"},
