@@ -66,7 +66,8 @@
 - http://docker-books.com/
 - [dev-ops-bookmarks](http://www.devopsbookmarks.com/)
 - [dev-ops-img](https://www.google.co.in/search?biw=1301&bih=605&tbm=isch&sa=1&q=devops+%3D+dev+%2B+ops)
-
+- https://blog.profitbricks.com/51-best-devops-tools-for-devops-engineers/
+- https://gist.github.com/ssmythe/ae1449b116ece85dc10d
 ---
 <center>***Thank You***<br/><span style="color:orange;"><i>Sivaram</i></center>
 

@@ -84,7 +84,8 @@
 | cat /etc/hosts | displays hostnames | |
 | cat /etc/passwd | displays login information | |
 | ~/.bashrc | user's personal startup file | | |
-
+| nl | prepend line numbers |
+| grep --color vmx /proc/cpuinfo | To Check VT CPU virtualization enable or not |
 ### Shell Scripting
 
 - Steps to create a script 

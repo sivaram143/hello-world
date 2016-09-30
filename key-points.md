@@ -24,6 +24,7 @@
 * Cluster - cluster consists of a set of loosely or tightly connected computers that work together so that, in many respects, they can be viewed as a single system.
 * Sharding - Sharding is the process of storing data records across multiple machines and is MongoDB's approach to meeting the demands of data growth. As the size of the data increases, a single machine may not be sufficient to store the data nor provide an acceptable read and write throughput.
 * Replication: A replica set in MongoDB is a group of mongod processes that maintain the same data set.
-
+* High-availability: 
+* Fault-tolerance:
 http://ux.stackexchange.com/questions/44170/how-to-handle-multiple-versions-of-same-application-with-different-set-of-featur
 
