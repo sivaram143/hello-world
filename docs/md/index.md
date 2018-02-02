@@ -1,6 +1,6 @@
 ## My Document Library
 
-I prepared for myself putting all in one place for quick reference. 
+I prepared for myself putting all in one place for quick reference.
 
 ### Platform
 
@@ -26,3 +26,7 @@ I prepared for myself putting all in one place for quick reference.
 #### Devops
 
 - [Devops](dev-ops.html)
+
+#### DataScience
+
+- [Resources](DS/resources.html)
