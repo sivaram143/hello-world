@@ -1,3 +1,27 @@
-MY TODO LIST
-------------
-  - 
+### MY TODO LIST / Skill Sets
+  - [x] HTML
+  - [x] CSS / Bootstrap
+  - [x] JavaScript
+  - MEAN Stack
+    - [x] MongoDB / MySql
+    - [x] Express
+    - [x] Angular JS
+    - [x] Node.js
+  - [x] React JS
+  - RPA
+    - [x] UI Path
+    - [ ] Blue Prism
+    - [ ] Automation Anywhere
+  - [ ] Data Science
+      - [ ] Statistics
+      - [ ] Probability
+      - [ ] Machine Learning
+      - [ ] AI
+      - [ ] Deep Learning
+      - [ ] Tools
+           - [ ] Excel
+           - [ ] R
+           - [ ] Tableau
+
+  - [ ] Block Chain
+  - [ ] IOT
