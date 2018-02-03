@@ -20,8 +20,11 @@ I prepared for myself putting all in one place for quick reference.
 
 #### AWS
 
-- AWS Sevices(TBD)
-- [DynamoDB](aws/dynamo-db.html)
+- [AWS Sevices](aws/aws-services.html)
+- [RDS](aws/RDS.html)
+- [DynamoDB](aws/DynamoDB.html)
+- [OpsWork](aws/OpsWork.html)
+- [AWS Practicals](aws/aws-practices.html)
 
 #### Devops
 
@@ -29,4 +32,4 @@ I prepared for myself putting all in one place for quick reference.
 
 #### DataScience
 
-- [Resources](DS/resources.html)
+- [Resources](DS/reference.html)
