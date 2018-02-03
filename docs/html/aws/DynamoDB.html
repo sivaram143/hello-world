@@ -5,7 +5,7 @@
 
 <xmp theme="cerulean" style="display:none;" toc toc-top-link>
 
-**[Back to the main page](index.html)**
+**[Back to the main page](../index.html)**
 <h1 id="dynamodb">DynamoDB</h1>
 <h3 id="introduction">Introduction</h3>
 <ul>
@@ -123,7 +123,7 @@
 </ol>
 <h4 id="deleting-the-dynamodb-table">Deleting the DynamoDB table</h4>
 <ol>
-<li>Select table in which you wish to delete and Click Actions -&gt; Delete table 
+<li>Select table in which you wish to delete and Click Actions -&gt; Delete table
 <img src="../../images/aws/dyn-delete-table.png" alt="Delete Table"></li>
 <li>This will open up a pop-up window, which will ask you for your confirmation. In that Click on Delete
 <img src="../../images/aws/dyn-delete-table-II.png" alt="DeleteTable"></li>
@@ -160,8 +160,8 @@ DynamoDB.</p>
 <img src="../../images/aws/dyn-js-shell.png" alt="JS-shell"></li>
 <li>Export the following environemnt variables in scripts/setup (If we use SDK)<pre><code>export AWS_ACCESS_KEY_ID=&quot;AWS_ACCESS_KEY&quot; || “dummyAccessKey”
 export AWS_SECRET_ACCESS_KEY=&quot;AWS_SECRET_KEY&quot; || “dummySecretKey”
-export AWS_ACCOUNT=&quot;AWS_ACCOUNT&quot; 
-export AWS_REGION=&quot;AWS_REGION&quot; || “ap-northeast-1&quot; 
+export AWS_ACCOUNT=&quot;AWS_ACCOUNT&quot;
+export AWS_REGION=&quot;AWS_REGION&quot; || “ap-northeast-1&quot;
 export AWS_ENDPOINT=&quot;dynamodb.$AWS_REGION.amazonaws.com&quot; || http://localhost:8000
 export AWS_DYNAMODB_TBL_PREFIX=&quot;ANY_PREFIX&quot; -&gt; This is optional
 </code></pre></li>
@@ -174,7 +174,7 @@ export AWS_DYNAMODB_TBL_PREFIX=&quot;ANY_PREFIX&quot; -&gt; This is optional
 <li>Enter the credentials and region</li>
 <li>To List the API reference <code>aws dynamodb help</code></li>
 <li>To know particular cmd help  <code>aws [options] &lt;command&gt; &lt;subcommand&gt; [parameters] list-tables help</code></li>
-<li>Eg:`<pre><code>aws list-tables 
+<li>Eg:`<pre><code>aws list-tables
 aws dynamodb query --table-name product --key-conditions file://conditions.json
 </code></pre></li>
 </ol>
