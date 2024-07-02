@@ -1,4 +1,4 @@
-#Key Points
+# Key Points
 
 * Front-end - browser based environment (think HTML, CSS, jQuery)
 * Back-end - desktop and server based environment (Ruby, Rails)
