@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<title>My Documents Repository</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<xmp theme="cerean" style="display:none;" toc toc-top-link>
+
+**[Back to the main page](index.html)**
+    <h1 id="install-softwares-in-mac-os">Install Softwares in mac os</h1>
+    <ul>
+        <li>
+            <p><a href="https://brew.sh/">Homebrew</a> calls itself <em>The missing package manager for macOS</em> and
+                is an essential to for any developer.</p>
+            <pre><code>sudo xcode-select --install
+/bin/bash -c $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot; # install homebrew
+echo 'PATH=&quot;/usr/local/bin:$PATH&quot;' &gt;&gt; ~/.bash_profile # Setting the path
+brew doctor</code></pre>
+        </li>
+        <li>
+            <p><a href="https://docs.docker.com/reference/cli/docker/">Docker</a> : Docker is a platform for developers
+                and sysadmins to develop, ship, and run applications. Docker lets you quickly assemble applications from
+                components and eliminates the friction that can come when shipping code. Docker lets you get your code
+                tested and deployed into production as fast as possible.</p>
+            <ul>
+                <li>option1: Navigate to the <a href="https://docs.docker.com/desktop/install/mac-install/">here</a>
+                </li>
+                <li>option2:
+                    <pre><code><div>brew install docker docker-machine
+docker run hello-world</code></pre>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <p><a href="https://www.atlassian.com/git/glossary#commands">GIT</a>: Git is a free and open source
+                distributed version contr system designed to handle everything from small to very large projects with
+                speed and efficiency.</p>
+            <pre><code>brew install git
+git --version
+which git
+**Setting config for first time**
+git config --global user.name &quot;Your Name Here&quot;
+git config --global user.email &quot;your_email@youremail.com&quot;
+git config --global credential.helper osxkeychain</code></pre>
+        </li>
+        <li>
+            <p><a href="https://www.atlassian.com/git/glossary#commands">GO</a>:</p>
+            <pre><code>brew install go
+go version
+which git</code></pre>
+        </li>
+        <li>
+            <p><a href="https://www.java.com/en/">Java</a>: Java requires you to install a JDK (&quot;Java Development
+                Kit&quot;) or JRE (&quot;Java Runtime Environment&quot;). We'll use a JDK since it can do everything a
+                JRE can, plus more.</p>
+            <pre><code>brew install openjdk
+java --version
+brew search jdk # list available jdk versions</code></pre>
+        </li>
+        <li>
+            <p><a href="https://www.mysql.com/">MySQL</a>: It is a relational database management system</p>
+            <pre><code>brew install mysql
+brew services start mysql</code></pre>
+        </li>
+        <li>
+            <p><a href="https://www.postgresql.org/">PostgreSQL</a>: PostgreSQL is an open source relational database
+                management system (RDBMS). It is the default database for macOS server.</p>
+            <pre><code>brew install postgres
+postgres -V
+brew services start postgresql 
+psql # PostgreSQL conse
+brew install psequel # GUI To
+</code></pre>
+        </li>
+        <li>
+            <p><a href="https://nodejs.org/en">Node.js</a>: Node.js is a JavaScript runtime built on Chrome's V8
+                JavaScript engine.</p>
+            <pre><code>brew install node
+node -v
+npm -v
+**Using NVM**
+brew install nvm # node version manager
+source ~/.bashrc        # source your bashrc/zshrc to add nvm to PATH
+command -v nvm          # check the nvm use message
+nvm install node        # install most recent Node stable version
+nvm ls                  # list installed Node version
+nvm use node            # use stable as current version
+nvm ls-remote           # list all the Node versions you can install
+nvm alias default node  # set the installed stable version as the default Node
+**Install locally**
+npm install &lt;package&gt;
+**Install globally**
+npm install -g &lt;package&gt; 
+npm list [-g] # list of available packages
+npm outdated [-g] # find outdated packages
+npm update [-g] [&lt;package&gt;] # upgrade all or a particular package
+npm uninstall [-g] &lt;package&gt; # uninstall a package
+brew install yarn # Yarn is another package manager built by Facebook. Yarn stands for Yet Another Resource Negotiator. It provides similar functionalities as NPM. It is an alternative to NPM when installing, uninstalling, and managing package dependencies from the NPM registry or GitHub repositories.
+</code></pre>
+        </li>
+        <li>
+            <p><a href="https://www.python.org/">Python</a>: Python is a programming language that lets you work quickly
+                and integrate systems more effectively.</p>
+            <pre><code>brew install python
+brew install python@2
+pip install --upgrade setuptos
+pip install --upgrade pip
+pip install ipython</code></pre>
+        </li>
+        <li>
+            <p>IDE: An integrated development environment (IDE) is a software application that provides comprehensive
+                facilities for software development. An IDE normally consists of at least a source-code editor, build
+                automation tos, and a debugger.</p>
+            <pre><code>brew install --cask sublime-text # Sublime
+brew install --cask visual-studio-code # VSCODE
+sudo sed -i '' '1a\'$'\n''auth       sufficient     pam_tid.so'$'\n' /etc/pam.d/sudo # Sudo permissions MAC with Touch pad
+</code></pre>
+        </li>
+    </ul>
+
+</xmp>
+
+<script src="http://ndossougbe.github.io/strapdown/dist/strapdown.js"></script>
+
+</body>
+
+</html>
